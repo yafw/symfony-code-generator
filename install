@@ -10,6 +10,8 @@ path=`dirname $0`
 mkdir /opt/symfony-code-generator
 cp -R ${path}/* /opt/symfony-code-generator
 rm /opt/symfony-code-generator/install
+chmod +x /opt/symfony-code-generator/template
+chmod 644 /opt/symfony-code-generator/template/*
 
 ln -s /opt/symfony-code-generator/main.py /usr/local/bin/scg
 chmod +x /usr/local/bin/scg
