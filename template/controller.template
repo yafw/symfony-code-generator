@@ -5,7 +5,7 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class <CLASS>Controller extends Controller
+class <CLASS> extends Controller
 {
     /**
      * @Route("/<ROUTE>")
