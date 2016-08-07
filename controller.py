@@ -7,7 +7,7 @@ def create(name):
 
     route_name = name
 
-    class_name = firstToUpper(name)
+    class_name = "%sController" % firstToUpper(name)
     class_path = 'src/AppBundle/Controller/%s.php' % class_name
 
     view_name = '\'%s/index.html.twig\'' % name
