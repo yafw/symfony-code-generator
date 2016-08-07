@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [[ "`id -u`" != "0" ]]; then
+    echo "ERROR: It's necessery run this install script as root." 1>&2
+    exit 1
+fi
+
+path=`dirname $0`
+
+mkdir /opt/symfony-code-generator
+cp -R ${path}/* /opt/symfony-code-generator
+rm /opt/symfony-code-generator/install
+
+ln -s /opt/symfony-code-generator/main.py /usr/local/bin/scg
+chmod +x /usr/local/bin/scg
+
+echo "Installation was probably sucessful."
